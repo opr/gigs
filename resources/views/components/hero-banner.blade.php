@@ -1,0 +1,1 @@
+<div class="hero-banner">This is the hero banner</div>
