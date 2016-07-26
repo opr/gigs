@@ -24,6 +24,10 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
 
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
+
     module: {
         loaders: [
             { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['react-hot', 'babel'] }

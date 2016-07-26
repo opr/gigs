@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Gigs</title>
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('/assets/styles/css/bloc.min.css') }}" />
 </head>
 
 <body>

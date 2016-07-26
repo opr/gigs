@@ -1,7 +1,7 @@
 // Include gulp
 var gulp = require('gulp'),
     textDomain = 'bloc',
-    appUrl = "airtours.local";
+    appUrl = "gigs.local";
 
 // Include Our Plugins
 var jshint = require('gulp-jshint'),
@@ -74,11 +74,11 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(gulp.dest('assets/styles/css/'))
-        .pipe(browsersync.stream())
         .pipe(cssimport())
         .pipe(cssmin({processImport: true}))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('../public/assets/styles/css'));
+        .pipe(gulp.dest('../public/assets/styles/css'))
+        .pipe(browsersync.stream());
         //.pipe(notify({message: "Sass compilation complete", title: "Compilation Successful"}));
 });
 
@@ -94,7 +94,6 @@ gulp.task('scripts', function() {
         .pipe(rename('bloc.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('../public/assets/js/dist'))
-        .pipe(notify({message: "Javascript linted and compiled", title: "Compilation Successful"}))
 });
 
 // Watch Files For Changes

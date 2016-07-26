@@ -14,7 +14,13 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('artists');
+    return view('frontpage');
+});
+
+
+Route::get('/api/artist/{search}', function () {
+    echo 'dhd';
+    return view('frontpage');
 });
 
 Route::post('/artist', function (Request $request) {

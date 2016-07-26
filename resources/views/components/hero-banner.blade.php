@@ -1,1 +1,3 @@
-<div class="hero-banner">This is the hero banner</div>
+<div class="hero-banner">
+    <div id="hero-banner__react-anchor"></div>
+</div>

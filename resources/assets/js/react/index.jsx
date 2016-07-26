@@ -1,16 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import Search from './components/Search/Search';
 
-var App =  React.createClass({
-    getInitialState: () => {
-        return { text: 'hdllo'}
-    },
-    render: function () {
-        return <p>{this.state.text}
-
-        </p>;
-    }
-});
-
-render(<App/>, document.getElementById('app'));
+render(<Search />, document.getElementById('hero-banner__react-anchor'));
 module.hot.accept();

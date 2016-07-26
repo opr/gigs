@@ -1,0 +1,42 @@
+@include component(search) {
+
+  @include bp($tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  @include part(input) {
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    height: 60px;
+    border-radius: 50px;
+    border: 0;
+    outline: 0;
+    font-weight: 300;
+  }
+
+  @include part(input-container) {
+    position: relative;
+  }
+
+  @include part(submit) {
+    background: $palette__a;
+    position: absolute;
+    right: -4px;
+    width: 60px;
+    height: 60px;
+    outline: 0;
+    border-radius: 40px;
+    border: 0;
+    margin-left: -20px;
+
+    &:after {
+      font-family: "FontAwesome";
+      content: "\f002";
+      color: #fff;
+    }
+  }
+}

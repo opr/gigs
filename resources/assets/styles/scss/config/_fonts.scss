@@ -14,6 +14,11 @@
   src: url(../../fonts/CenturyGothicBold.eot);
   src: local('☺'), url(../../fonts/CenturyGothicBold.ttf);
 }
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(/assets/fonts/fontawesome-webfont.eot);
+  src: local('☺'), url(/assets/fonts/fontawesome-webfont.ttf);
+}
 
 html {
   font-family: $basefont;
