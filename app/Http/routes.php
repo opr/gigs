@@ -1,6 +1,6 @@
 <?php
 
-use App\Gig;
+use App\Artist;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +14,10 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('gigs');
+    return view('artists');
 });
 
-Route::post('/gig', function (Request $request) {
+Route::post('/artist', function (Request $request) {
     $validator = Validator::make($request->all(), [
         'name' => 'required|max:255',
     ]);
@@ -28,9 +28,9 @@ Route::post('/gig', function (Request $request) {
             ->withErrors($validator);
     }
 
-    $gig = new Gig;
-    $gig->name = $request->name;
-    $gig->save();
+    $artist = new Artist;
+    $artist->name = $request->name;
+    $artist->save();
 
     return redirect('/');
 });
