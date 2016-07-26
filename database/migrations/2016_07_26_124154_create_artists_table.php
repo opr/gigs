@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGigsTable extends Migration
+class CreateArtistsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class CreateGigsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gigs', function (Blueprint $table) {
+        Schema::create('artists', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('place');
+            $table->text('description');
+            $table->integer('genre_id');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateGigsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('gigs');
+        Schema::drop('artists');
     }
 }
