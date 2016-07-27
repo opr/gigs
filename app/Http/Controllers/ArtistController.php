@@ -9,7 +9,7 @@ use App\Http\Requests;
 class ArtistController extends Controller
 {
     public function search(Request $request) {
-	    $artists = Artist::where( 'name', 'like', $request->search . '%' )->get();
+	    $artists = Artist::where( 'name', 'like', $request->search . '%' )->orderBy('name', 'asc')->get();
 	    return json_encode($artists);
     }
 }

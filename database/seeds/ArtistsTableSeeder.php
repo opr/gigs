@@ -12,7 +12,7 @@ class ArtistsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        $limit = 33;
+        $limit = 500;
 
         for( $i = 0; $i < $limit; $i++ ) {
             DB::table('artists')->insert([

@@ -1,14 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-var SearchResults = React.createClass({
-    getInitialState: () => {
-        return {
 
-        };
-    },
+var SearchResults = React.createClass({
     render: function () {
-        return <div className="search-results">
+        return <div className="search-results">{this.props.searchResults}
         </div>;
     }
 });
