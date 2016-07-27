@@ -1,8 +1,14 @@
 @include component(hero-banner) {
+
+  @include transition-time(all,ease, 0.5s);
   height: 100vh;
-  background: url(/assets/img/bg1.jpg);
+  background: url(/assets/img/bg1.jpg) center;
   background-size: cover;
   text-align: center;
   width: 100%;
   position: relative;
+
+  @include option(small) {
+    height: 33vh;
+  }
 }

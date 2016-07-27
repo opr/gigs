@@ -225,12 +225,16 @@ body.\--nav-open {
       color: #FF9A04; }
 
 .hero-banner {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   height: 100vh;
-  background: url(/assets/img/bg1.jpg);
+  background: url(/assets/img/bg1.jpg) center;
   background-size: cover;
   text-align: center;
   width: 100%;
   position: relative; }
+  .hero-banner.\--small {
+    height: 33vh; }
 
 .hidden-label {
   position: absolute;

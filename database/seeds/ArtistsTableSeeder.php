@@ -17,7 +17,8 @@ class ArtistsTableSeeder extends Seeder
         for( $i = 0; $i < $limit; $i++ ) {
             DB::table('artists')->insert([
                 'name' => $faker->firstName . ' ' . $faker->lastName,
-                'description' => $faker->realText()
+                'description' => $faker->realText(),
+                'created_at' => $faker->dateTime
             ]);
         }
     }

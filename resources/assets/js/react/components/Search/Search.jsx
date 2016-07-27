@@ -11,13 +11,12 @@ var Search =  React.createClass({
         };
     },
     handleChange: function(event) {
-        let oldLastKeypress = this.state.lastKeyPress;
-
+        this.props.notifySearchModified(event.target.value);
         this.setState({
             lastKeyPress: new Date().getTime(),
             inputContents: event.target.value
         });
-        autoComplete(this.state.inputContents, oldLastKeypress);
+        autoComplete(event.target.value, event.target.value);
     },
     render: function () {
         return <form className="search">

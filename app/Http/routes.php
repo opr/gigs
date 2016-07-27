@@ -18,10 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/api/artist/{search}', function () {
-    echo 'dhd';
-    return view('frontpage');
-});
+Route::get('/api/artist/search/{search}', 'ArtistController@search');
 
 Route::post('/artist', function (Request $request) {
     $validator = Validator::make($request->all(), [
