@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/api/artist/search/{search}', 'ArtistController@search');
 
+Route::get('/artist/{slug}', 'ArtistController@slug');
+
 Route::post('/artist', function (Request $request) {
     $validator = Validator::make($request->all(), [
         'name' => 'required|max:255',

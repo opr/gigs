@@ -29,7 +29,6 @@ var Search =  React.createClass({
                 <input type="text" name="search" className="input search__input --text" id="search__input" value={this.state.inputContents} autoComplete="off" placeholder="Search for an artist..." onChange={this.handleChange} />
                 <button type="submit" name="submit" className="input search__submit"></button>
             </div>
-            <div className="debug">{this.state.lastKeyPress}</div>
         </form>;
     }
 });

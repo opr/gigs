@@ -15,10 +15,12 @@ class ArtistsTableSeeder extends Seeder
         $limit = 500;
 
         for( $i = 0; $i < $limit; $i++ ) {
+            $fakeName = $faker->firstName . ' ' . $faker->lastName;
             DB::table('artists')->insert([
-                'name' => $faker->firstName . ' ' . $faker->lastName,
+                'name' => $fakeName,
                 'description' => $faker->realText(),
-                'created_at' => $faker->dateTime
+                'slug' => str_slug( $fakeName, '-' ),
+                'created_at' => $faker->dateTime,
             ]);
         }
     }

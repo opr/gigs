@@ -14,7 +14,7 @@
 | of them, this causes the container to have the  |
 | proper height.
 *************************************************/
-@import url(https://fonts.googleapis.com/css?family=Muli:400,300,200);
+@import url("https://fonts.googleapis.com/css?family=Questrial");
 .cf:after, .container:after {
   visibility: hidden;
   display: block;
@@ -138,7 +138,7 @@ table {
   src: local("☺"), url(/assets/fonts/fontawesome-webfont.ttf); }
 
 html {
-  font-family: "Muli", sans-serif;
+  font-family: "Questrial", sans-serif;
   font-size: 14px;
   color: #000; }
   @media (min-width: 560px) {
@@ -254,6 +254,55 @@ iframe {
     padding: 20px 0; }
     .navbar__mobile-control.\--960px {
       display: none; }
+
+.search-results {
+  display: none; }
+  .search-results.\--show {
+    display: block; }
+  .search-results__result {
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 33vh;
+    position: relative;
+    text-align: center; }
+    .search-results__result:nth-child(0) {
+      background-color: #c4cbca; }
+    .search-results__result:nth-child(1) {
+      background-color: #bfc6c5; }
+    .search-results__result:nth-child(2) {
+      background-color: #b9c1c0; }
+    .search-results__result:nth-child(3) {
+      background-color: #b4bdbb; }
+    .search-results__result:nth-child(4) {
+      background-color: #aeb8b7; }
+    .search-results__result:nth-child(5) {
+      background-color: #a9b3b2; }
+    .search-results__result:nth-child(6) {
+      background-color: #a3aead; }
+    .search-results__result:nth-child(7) {
+      background-color: #9eaaa8; }
+    .search-results__result:nth-child(8) {
+      background-color: #99a5a3; }
+    .search-results__result:hover {
+      box-shadow: 0 0 20px -6px #0A0F0D inset; }
+    .search-results__result:hover .search-results__result__title {
+      font-size: 2.15rem; }
+    .search-results__result__title {
+      -webkit-transition: font-size 0.3s ease;
+      transition: font-size 0.3s ease;
+      position: absolute;
+      width: 100%;
+      color: #EE4266;
+      padding: 0 10%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      font-size: 2.2rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
 
 @media (min-width: 560px) {
   .search {

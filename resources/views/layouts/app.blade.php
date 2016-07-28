@@ -13,6 +13,7 @@
 </div>
 
 @yield('content')
+
 <script src="{{ URL::asset('/assets/js/dist/bloc.js') }}"></script>
 <script src="{{ URL::asset('/assets/js/dist/bundle.js') }}"></script>
 </body>

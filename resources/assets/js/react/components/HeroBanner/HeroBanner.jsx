@@ -37,7 +37,6 @@ var HeroBanner =  React.createClass({
     function mapDispatchToProps(dispatch) {
         return {
             setSearchResults: (results) => {
-                console.log('about to dispatch');
                 dispatch(setSearchResults(results));
             }
         }
