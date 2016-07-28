@@ -15,7 +15,7 @@
 | proper height.
 *************************************************/
 @import url("https://fonts.googleapis.com/css?family=Questrial");
-.cf:after, .container:after {
+.cf:after, .artist-description:after, .artist-description__social-sharing:after, .container:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -139,25 +139,62 @@ table {
 
 html {
   font-family: "Questrial", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #000; }
   @media (min-width: 560px) {
     html {
-      font-size: 14px; } }
+      font-size: 16px; } }
   @media (min-width: 960px) {
     html {
-      font-size: 14px; } }
+      font-size: 16px; } }
   @media (min-width: 1260px) {
     html {
-      font-size: 14px; } }
-
-a {
-  color: #FF9A04; }
+      font-size: 16px; } }
 
 /*************************************************|
 | Now we can actually get on with making the site |
 | styles                                          |
 *************************************************/
+.artist-data-container {
+  padding: 40px 0; }
+
+.artist-description {
+  color: #0A0F0D;
+  border-radius: 3px;
+  box-shadow: 6px 5px 5px -4px #0A0F0D;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f0f0f0; }
+  @media (min-width: 960px) {
+    .artist-description {
+      width: 48%;
+      display: inline-block;
+      float: left;
+      margin-right: 4%; }
+      .artist-description:last-child {
+        margin-right: 0; } }
+  .artist-description__social-sharing {
+    margin: 30px auto 0; }
+  .artist-description__social-sharing-link {
+    width: 33.33%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    font-size: 1.3rem; }
+    .artist-description__social-sharing-link:after {
+      color: #EE4266;
+      font-family: "FontAwesome"; }
+    .artist-description__social-sharing-link.\--facebook:after {
+      content: '\f09a'; }
+    .artist-description__social-sharing-link.\--twitter:after {
+      content: '\f099'; }
+    .artist-description__social-sharing-link.\--soundcloud:after {
+      content: '\f1be'; }
+  .artist-description__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px; }
+
 body.\--nav-open {
   overflow: hidden; }
 
@@ -189,52 +226,57 @@ body.\--nav-open {
   .container.\----d75 {
     width: 75%; }
 
+.cover-photo {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  background-position: center; }
+  .cover-photo__artist-name {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700; }
+    .cover-photo__artist-name__inner {
+      color: #C4CBCA;
+      background: rgba(10, 15, 13, 0.7);
+      padding: 20px;
+      display: inline-block; }
+
 .header-topbar {
   height: 50px;
   width: 100%;
   background: #38548c; }
 
 .header {
-  width: 100%;
-  display: none; }
-  .header__button {
-    color: green; }
-  .header__column {
-    width: 100%;
-    text-align: center;
-    color: #38548c;
-    background: #FF9A04; }
-    @media (min-width: 560px) {
-      .header__column {
-        color: red;
-        width: 48%;
-        display: block;
-        float: left;
-        margin: 0 4% 20px 0; }
-        .header__column:nth-child(2n) {
-          margin-right: 0; } }
-    @media (min-width: 960px) {
-      .header__column {
-        width: 22%; }
-        .header__column:nth-child(2n) {
-          margin-right: 4%; }
-        .header__column:nth-child(4n) {
-          margin-right: 0; } }
-    .header__column.\--red-background {
-      background: blue;
-      color: #FF9A04; }
+  border-top: 4px solid #3CBBB1;
+  padding: 20px 0;
+  background: #0A0F0D;
+  color: #C4CBCA;
+  box-sizing: border-box;
+  height: 70px; }
+  .header__burger-menu {
+    font-size: 2rem;
+    float: right;
+    text-align: right;
+    cursor: pointer; }
+  .header__logo-container {
+    float: left;
+    height: 100%; }
+  .header__logo {
+    height: 40px; }
 
 .hero-banner {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  height: 100vh;
+  height: calc(100vh - 70px);
   background: url(/assets/img/bg1.jpg) center;
   background-size: cover;
   text-align: center;
   width: 100%;
   position: relative; }
   .hero-banner.\--small {
-    height: 33vh; }
+    height: calc(33.33vh - 70px); }
 
 .hidden-label {
   position: absolute;
@@ -265,7 +307,7 @@ iframe {
     display: inline-block;
     float: left;
     width: 25%;
-    height: 33vh;
+    height: 33.33vh;
     position: relative;
     text-align: center; }
     .search-results__result:nth-child(0) {

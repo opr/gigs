@@ -15,6 +15,6 @@ class ArtistController extends Controller
 
 	public function slug(Request $request) {
 		$artist = Artist::where( 'slug', '=', $request->slug )->get();
-		return view('artist', $artist);
+		return view('artist', ['artist' => $artist[0]]);
 	}
 }

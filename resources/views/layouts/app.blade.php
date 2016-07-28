@@ -3,6 +3,7 @@
 <head>
     <title>Gigs</title>
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('/assets/styles/css/bloc.min.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>

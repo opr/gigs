@@ -1,0 +1,21 @@
+@include component(cover-photo) {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+
+  @include part(artist-name) {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+
+    @include part(inner) {
+      color: $palette__d;
+      background: rgba(10,15,13,0.7);
+      padding: 20px;
+      display: inline-block;
+    }
+  }
+}

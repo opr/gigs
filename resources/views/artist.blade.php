@@ -2,6 +2,13 @@
 
 @section('content')
 
-    {{$name}}
+    @include('components.header')
+
+
+    @if($artist->name)
+        @include('components.cover-photo')
+    @endif
+
+    @include('components.artist-data-container')
 
 @endsection

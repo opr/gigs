@@ -1,0 +1,64 @@
+@include component(artist-description) {
+  @extend .cf;
+  color: $palette__c;
+  border-radius: 3px;
+  box-shadow: 6px 5px 5px -4px $palette__c;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  
+  @include bp($landscapetablet) {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-right: 4%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include part(social-sharing) {
+    @extend .cf;
+    margin: 30px auto 0;
+  }
+  @include part(social-sharing-link) {
+    width: 33.33%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    text-decoration: none;
+    font-size: 1.3rem;
+
+    &:after {
+      color: $palette__a;
+      font-family: "FontAwesome";
+    }
+
+    @include option(facebook) {
+
+      &:after {
+        content: '\f09a';
+      }
+    }
+
+    @include option(twitter) {
+
+      &:after {
+        content: '\f099';
+      }
+    }
+
+    @include option(soundcloud) {
+
+      &:after {
+        content: '\f1be';
+      }
+    }
+  }
+
+  @include part(title) {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
