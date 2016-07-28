@@ -19,10 +19,12 @@ var HeroBanner =  React.createClass({
             className: className
         });
     },
+    componentWillReceiveProps: function(nextProps) {
+      console.log(nextProps.searchResults);
+    },
     render: function() {
         return (
             <div className={this.state.className}>
-                <div style={{color: 'white'}}>{this.props.searchResults}</div>
                 <Search setSearchResults={this.props.setSearchResults} notifySearchModified={this.notifySearchModified}/>
             </div>
         )
@@ -30,7 +32,7 @@ var HeroBanner =  React.createClass({
 });
 
     function mapStateToProps(state) {
-        return {searchResults: state};
+        return {searchResults: state.get('searchResults')};
     };
     function mapDispatchToProps(dispatch) {
         return {

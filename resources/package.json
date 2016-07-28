@@ -4,7 +4,7 @@
   "description": "A responsive CSS Framework.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha  ./assets/js/test --compilers js:babel-core/register --require ./assets/js/test/test_helper.js  --recursive",
+    "test": "mocha ./assets/js/test --compilers js:babel-core/register --require ./assets/js/test/test_helper.js  --recursive --reporter nyan",
     "test:watch": "npm run test -- --watch"
   },
   "babel": {

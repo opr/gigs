@@ -1,12 +1,14 @@
 import {Map, fromJS} from 'immutable';
 import {expect} from 'chai';
+import {add} from '../react/actions';
 
 import reducer from '../react/reducer';
 
 describe('reducer', () => {
 
     it('handles SET_ENTRIES', () => {
-        const initialState = Map();
+        const state = Map();
+        const initialState = reducer(state, {type: 'INIT_STATE'});
         const action = {
             type: 'SET_SEARCH_RESULTS',
             payload: [{

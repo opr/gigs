@@ -23,7 +23,7 @@ var Search =  React.createClass({
         });
     },
     render: function () {
-        return <form className="search">{this.props.searchResults}
+        return <form className="search">
             <label htmlFor="search__input" className="hidden-label">Search</label>
             <div className="search__input-container">
                 <input type="text" name="search" className="input search__input --text" id="search__input" value={this.state.inputContents} autoComplete="off" placeholder="Search for an artist..." onChange={this.handleChange} />
