@@ -6,9 +6,11 @@
   padding: 30px;
   box-sizing: border-box;
   background: #f0f0f0;
+  margin-bottom: 40px;
   
   @include bp($landscapetablet) {
     width: 48%;
+    margin-bottom: 0;
     display: inline-block;
     float: left;
     margin-right: 4%;

@@ -164,10 +164,12 @@ html {
   box-shadow: 6px 5px 5px -4px #0A0F0D;
   padding: 30px;
   box-sizing: border-box;
-  background: #f0f0f0; }
+  background: #f0f0f0;
+  margin-bottom: 40px; }
   @media (min-width: 960px) {
     .artist-description {
       width: 48%;
+      margin-bottom: 0;
       display: inline-block;
       float: left;
       margin-right: 4%; }
