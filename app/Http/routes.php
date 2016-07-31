@@ -39,3 +39,10 @@ Route::post('/artist', function (Request $request) {
 
     return redirect('/');
 });
+
+Route::get('/testapi', function() {
+    $uri = 'http://www.skiddle.com/api/v1/artists/?api_key=' . env('SKIDDLE_API_KEY') . '&name=a&offset=0';
+    $response = \Httpful\Request::get($uri)->send();
+    var_dump($response);
+
+});
